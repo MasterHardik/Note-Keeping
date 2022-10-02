@@ -17,15 +17,15 @@
    
 }
 .note{
-    margin: 10px 0px 0px 10px;
-
+    margin: 100px 0px 100px 24px;
     height: 55vh;
     width: 265px;
     background-color: white;    
     border-radius: 20px;
-    box-shadow: 15px 15px 20px rgba(0, 0 ,0 ,0.1),
-    -15px -15px 20px rgba(14, 163, 126, 0.733);
+    box-shadow: 15px 15px 20px rgba(34, 33, 33, 0.1),
+    -15px -15px 20px rgba(34, 219, 173, 0.733);
     padding: 0 0 0 0;
+    margin-left: 4%;
 }
 .tool-bar{
     border-top-left-radius:20px;
@@ -34,29 +34,39 @@
     background-color:#282c2f;
     height: 50px;
     width: 100%;
-    position: relative;
+    /* position: relative; */
     display: inline-block;
+    padding-top: 5%;
+}
+
+.option{
+    display: flex;
+    justify-content: space-evenly;
 
 }
 .save{
+    position: relative;
     background-color: white;
-    height: 15px;
-    margin-left: 80%;
-    margin-top: 4%;
+    height: 20px;
+    width: 20px;
+    margin-left: 86%;
+    margin-top:3px ;
     border-top-right-radius: 6px;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     cursor: pointer;
+    z-index: 1;
 }
-.trash{
-    background-color: white;
-    height: 15px;
-    margin-top: 6%;
-    margin-left: 2px;
+.trash-bin{
+    height: 22px;
+    width: 20px;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
-    padding-top: 1px;
+    padding-top: 2px;
     cursor: pointer ;
+    z-index: 1;
+    margin-left: 13px;
+    margin-right: 50px;
     
 }
 
@@ -75,4 +85,31 @@
 .note textarea:focus{
     border: 0;
     outline: 0;
+}
+
+.add{
+    display: flex;
+    position: fixed;
+    height: 20px;
+    width: 65px;
+    font-size: 50px;
+    border-radius: 45px;
+    background-color: white;
+    font-weight: bolder;
+    text-align: center;
+    padding-bottom: 4rem;
+    justify-content:center;
+    margin-right: 20px;
+    cursor: pointer;
+    top: 20px;
+    right: 0;
+    box-shadow: 15px 15px 20px rgba(34, 33, 33, 0.1),
+    -15px -15px 20px rgba(34, 219, 173, 0.733);
+}
+
+.add img{
+    margin-top: 14px;
+    height: 36px;
+    width: 34px;
+
 }
