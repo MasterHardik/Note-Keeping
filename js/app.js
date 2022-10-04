@@ -26,11 +26,10 @@ const SaveNote = () => {
     } else {
         localStorage.setItem("notes", JSON.stringify(data));
     }
-    
 
 }
 
-const AddNote = (text ="") => {
+const AddNote = (text = "") => {
     const note = document.createElement("div");
     note.classList.add("note");
     note.innerHTML = `
@@ -43,12 +42,14 @@ const AddNote = (text ="") => {
     <textarea >${text}</textarea>
     `;
     
+
     // now to add some event  listners like for the save and delete
-    
+
     note.querySelector(".trash-bin").addEventListener(
         "click",
         function () {
             note.remove();
+            alert("Delete Note !");
             SaveNote();
         }
         )
@@ -78,14 +79,17 @@ const AddNote = (text ="") => {
                 const lsNotes = JSON.parse(localStorage.getItem("notes"));
                 if (lsNotes === null) {
                     AddNote();
+                    alert("New Session Started !");
                 }
                 else {
                     lsNotes.forEach(
                         (lsNotes) => {
                             AddNote(lsNotes);
+                            
                         }
-                    )
+                        )
+                    }
+                    alert("Last Notes Restored !");
                 }
-            }
             )()
             
